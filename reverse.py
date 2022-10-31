@@ -45,4 +45,14 @@ if __name__ == "__main__":
         for i in data:
             f.write(((i >> 4) + ((i << 4) & 0xFF)).to_bytes(length=1, byteorder="big", signed=False))
 
+    # 12345678 90ABCDEF -> 78563412 efcdab90
+    with open(f"reverse_6_{file_name}", "wb") as f:
+        for i in range(0, len(data), 4):
+            f.write(data[i:i+4][::-1])
+
+    # 12345678 90ABCDEF -> EFCDAB078563412
+    with open(f"reverse_7_{file_name}", "wb") as f:
+        for i in range(0, len(data), 8):
+            f.write(data[i:i+8][::-1])
+
 
