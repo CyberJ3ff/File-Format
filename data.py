@@ -102,6 +102,14 @@ OTHER = {
     "MKV/MKA/MKS/MK3D/WEBM": {
         "HEAD": ["1A 45 DF A3"],
         "TAIL": []
+    },
+    "PCAP": {
+        "HEAD": ["D4 C3 B2 A1"],
+        "TAIL": []
+    },
+    "PCAPNG": {
+        "HEAD": ["0A 0D 0D 0A"],
+        "TAIL": []
     }
 }
 
