@@ -2,6 +2,7 @@ import os
 import binascii
 import argparse
 from data import FILE_DATA
+from collections import Counter
 from rich.console import Console
 
 
@@ -92,7 +93,8 @@ def get_xor_similarity(record_hexstr, file_hexstr, reverse=False):
         xor_ret = [hex(int(record_hexstr[i], 16) ^ int(file_hexstr[i], 16)) for i in range(len(record_hexstr)) if record_hexstr[i] != "??"]
     else:
         xor_ret = [hex(int(record_hexstr[i][::-1], 16) ^ int(file_hexstr[i][::-1], 16)) for i in range(len(record_hexstr)) if record_hexstr[i] != "??"]
-    return max(xor_ret), round(xor_ret.count(max(xor_ret)) / len(xor_ret), 4)
+    result = Counter(xor_ret).most_common()
+    return result[0][0], round(result[0][1] / len(xor_ret), 4)
 
 def xor_compare(file_hexstr, dict_key):
     print_info = []
