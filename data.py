@@ -110,6 +110,10 @@ OTHER = {
     "PCAPNG": {
         "HEAD": ["0A 0D 0D 0A"],
         "TAIL": []
+    },
+    "PST": {
+        "HEAD": ["21 42 44 4E"],
+        "TAIL": []
     }
 }
 
