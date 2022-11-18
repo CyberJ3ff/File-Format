@@ -153,7 +153,7 @@ if __name__ == "__main__":
     console.print("\n3.开始异或文件头和文件尾:", style="bold blue")
     for file_hexstr, dict_key in [(head_hexstr, "HEAD"), (tail_hexstr, "TAIL")]:
         dict_key, print_info = xor_compare(file_hexstr=file_hexstr, dict_key=dict_key)
-        if print_info != []:
+        if print_info != [] and print_info[0][2] != "0x0":
             flag = True
             show_xor_info(dict_key, print_info)
     if not flag:
