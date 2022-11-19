@@ -53,6 +53,10 @@ COMPRESS = {
     "BZ2": {
         "HEAD": ["42 5A 68"],
         "TAIL": []
+    },
+    "GZ/TAR": {
+        "HEAD": ["1F 8B"],
+        "TAIL": []
     }
 }
 
