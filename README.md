@@ -4,7 +4,7 @@
 
 <br>
 
-# 效果：
+## 效果：
 
 [ACTF新生赛2020]music
 
@@ -17,3 +17,13 @@ ctfshow 菜狗杯 打不开的图
 ctfshow 菜狗杯 你会异或吗：
 
 <img src="./images/image3.gif">
+
+<br>
+
+# File-Reverse
+
+简单说一下，就是常用的Misc的reverse情况
+
+## 效果：
+
+<img src="./images/reverse-image1.gif">
